@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Traits\Relationships\User\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -17,6 +18,7 @@ class User extends Authenticatable
     use Notifiable;
     use HasApiTokens;
     use SoftDeletes;
+    use HasMany;
 
     /**
      * The attributes that are mass assignable.
@@ -57,18 +59,4 @@ class User extends Authenticatable
         });
     }
 
-    public function authors()
-    {
-        return $this->hasMany(UserPreferenceAuthor::class);
-    }
-
-    public function categories()
-    {
-        return $this->hasMany(UserPreferenceCategory::class);
-    }
-
-    public function sources()
-    {
-        return $this->hasMany(UserPreferenceSource::class);
-    }
 }
