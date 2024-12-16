@@ -1,0 +1,1025 @@
+{
+	"info": {
+		"_postman_id": "2bda6b5d-f603-4e96-acf7-2403cf14ccc9",
+		"name": "news-aggregator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33214662",
+		"_collection_link": "https://dark-sunset-689897.postman.co/workspace/Regio~f5295ce6-4f88-45a7-af31-9fa09aa01e2a/collection/33214662-2bda6b5d-f603-4e96-acf7-2403cf14ccc9?action=share&source=collection_link&creator=33214662"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"Password123\",\r\n  \"password_confirmation\": \"Password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"Password123\",\r\n  \"password_confirmation\": \"Password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 14:58:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"uuid\": \"dd4e29e6-213b-4305-a54b-63d38bee40d3\",\n        \"name\": \"John Doe\",\n        \"email\": \"john@example.com\",\n        \"created_at\": \"2024-12-16 14:58:13\"\n    },\n    \"token\": \"15|NdkRuZ6Yun7KVrAwk1OZ9srHqo51JDb3pikd0IzHa9c85462\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"Password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"Password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 14:58:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User Logged in successfully\",\n    \"data\": {\n        \"uuid\": \"dd4e29e6-213b-4305-a54b-63d38bee40d3\",\n        \"name\": \"John Doe\",\n        \"email\": \"john@example.com\",\n        \"created_at\": \"2024-12-16 14:58:13\"\n    },\n    \"token\": \"16|ZaRnulkqerNcAVlopXH10BRd2HtNtouV1JGcI751dcd586de\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "17|JgqaXRHv8SLaBkBBglmr0ftVssjdxSw2b9e06Zpx658299a7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "Token 17|ZaRnulkqerNcAVlopXH10BRd2HtNtouV1JGcI751dcd586de",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "Token 17|ZaRnulkqerNcAVlopXH10BRd2HtNtouV1JGcI751dcd586de",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/logout",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 15:14:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Logged out successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "password request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"john@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/password-reset",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"password-reset"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User password reset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"john@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/password-reset",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"password-reset"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 15:04:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Password reset link sent to your email.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User password reset",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\": \"abcdef123456\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"NewPassword123\",\r\n  \"password_confirmation\": \"NewPassword123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/password-reset/confirm",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"password-reset",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "Fetch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/articles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "fetch articles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/articles",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"articles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 15:17:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"uuid\": \"e095feb3-319e-448c-987b-40747012315c\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Prof. Bruce Emmerich\",\n            \"title\": \"Sit suscipit eveniet aut aut.\",\n            \"description\": \"Aliquid rerum quos optio aliquam ut. Fugit qui nam asperiores veniam ipsum earum quisquam. Et magnam et vero officia.\",\n            \"content\": \"Ut eum est sed laudantium quis qui. Expedita officiis voluptas assumenda vitae autem enim. Ut quia nam voluptate est delectus qui ducimus maxime.\",\n            \"url\": \"http://www.stanton.biz/enim-consequatur-ratione-blanditiis-accusamus-consequatur-qui-eveniet-sapiente\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00aa55?text=iste\",\n            \"published_at\": \"1970-07-14\",\n            \"category\": \"sapiente\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"49a431a3-ab47-4e13-a95e-a5b3221275a4\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Marlen Larkin\",\n            \"title\": \"Beatae atque debitis inventore aperiam neque fugiat.\",\n            \"description\": \"Magni qui illo quae recusandae quasi placeat. Est qui in dolorem et aspernatur voluptate. Magnam perspiciatis consequuntur eius voluptatem dolore blanditiis non.\",\n            \"content\": \"Alias temporibus molestias qui corrupti et maxime. Omnis et et tempora sed. Qui velit libero ratione maiores odit.\",\n            \"url\": \"http://www.luettgen.info/\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/004499?text=molestiae\",\n            \"published_at\": \"1985-06-24\",\n            \"category\": \"nesciunt\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"17f4b3b6-18b8-4fda-8af3-5443fc29e5de\",\n            \"source\": \"Guardian\",\n            \"author\": \"Shaina Langworth\",\n            \"title\": \"Sint cumque tempore voluptas consequatur nobis voluptatum aut.\",\n            \"description\": \"Velit laudantium rerum nesciunt dolor. Eveniet expedita enim qui provident labore magni. Ut vel amet nam eveniet ut aspernatur alias nihil.\",\n            \"content\": \"Dolorem autem est voluptatem tempore dolores. Nemo qui animi est natus voluptatem inventore temporibus. Mollitia temporibus delectus soluta minima. Et dolorum vitae nam nihil.\",\n            \"url\": \"http://www.corkery.net/at-aut-sapiente-facilis-autem-delectus\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/009933?text=numquam\",\n            \"published_at\": \"2015-09-14\",\n            \"category\": \"atque\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"de5ff658-a9c1-4ad2-bbdd-0d3751a87974\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Eveline Welch\",\n            \"title\": \"Ipsa ut et vel consectetur laudantium non.\",\n            \"description\": \"Blanditiis sapiente veniam adipisci natus. Repellat enim cum iusto et eligendi. Atque voluptatum quam soluta recusandae amet adipisci. Aut debitis laboriosam suscipit.\",\n            \"content\": \"Quidem officia praesentium sit assumenda mollitia nemo. Atque aut occaecati consequatur deleniti non ratione quibusdam. Possimus qui quod doloribus esse modi sint vitae. Commodi at qui aut incidunt ipsa asperiores quod.\",\n            \"url\": \"https://greenholt.com/distinctio-et-voluptates-debitis-ea-aut-ad-tempore.html\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/0088ee?text=in\",\n            \"published_at\": \"1987-09-17\",\n            \"category\": \"molestiae\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"158d4672-081c-413b-991a-7a6b200e44d3\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Mollie Mueller\",\n            \"title\": \"Ipsum accusantium ut libero voluptates sequi odit non.\",\n            \"description\": \"Provident ullam nihil beatae omnis suscipit. Libero earum sapiente non saepe est sed excepturi eos. Doloribus dolorum maiores sit quia quia.\",\n            \"content\": \"Qui architecto voluptatem repellat odit qui excepturi. Possimus et voluptas autem. Sit totam rerum nam placeat reiciendis tempora itaque. Quia aut dolorem repellendus dolor aut et.\",\n            \"url\": \"http://treutel.com/nihil-recusandae-praesentium-quam-exercitationem\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00bb33?text=autem\",\n            \"published_at\": \"2024-10-10\",\n            \"category\": \"est\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"2bf6c104-33d1-46dc-b63a-fdafd0266b88\",\n            \"source\": \"NYT\",\n            \"author\": \"Maryse Leannon\",\n            \"title\": \"Porro repellendus repellendus deserunt eveniet et reiciendis rerum.\",\n            \"description\": \"Sapiente recusandae perspiciatis nobis. Ipsum omnis sed voluptates quod impedit. Quisquam aut rem nemo aspernatur. Veniam aut aut possimus sit. Officiis ullam necessitatibus eos id.\",\n            \"content\": \"Harum corporis voluptatibus sed quasi nesciunt incidunt. Iste repellendus odio est similique laborum optio unde quia. Eligendi explicabo eaque quae numquam.\",\n            \"url\": \"http://langosh.com/aut-illum-esse-nihil\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00ee88?text=officia\",\n            \"published_at\": \"1993-06-13\",\n            \"category\": \"impedit\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"d27bf017-fe55-42a3-91ae-1fbb35970377\",\n            \"source\": \"NYT\",\n            \"author\": \"Prof. Kamille Haley\",\n            \"title\": \"Laudantium eveniet labore illum sed quis.\",\n            \"description\": \"Non quod impedit molestiae sapiente molestiae tempore et ipsum. Aperiam explicabo eum iusto suscipit et ex. Placeat voluptatem quasi non et porro. Magnam voluptatem molestiae aut ut.\",\n            \"content\": \"Necessitatibus totam consequatur eveniet rerum exercitationem quas. Quisquam temporibus repellendus porro vel illum. Iusto sint aut nulla nobis. Rerum sit nemo et quia et sit.\",\n            \"url\": \"http://okeefe.com/\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/002266?text=repudiandae\",\n            \"published_at\": \"2011-09-15\",\n            \"category\": \"et\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"5f7dce8e-fda6-4075-b024-799d26ecb51d\",\n            \"source\": \"Guardian\",\n            \"author\": \"Seth Roberts\",\n            \"title\": \"Inventore sit cumque rerum quibusdam.\",\n            \"description\": \"Dolores nulla et ut minima est quae quos autem. Repellat voluptatibus vel magnam molestiae. Ratione voluptatem sit tenetur reiciendis ad eligendi ad at.\",\n            \"content\": \"Eaque velit asperiores recusandae voluptatem libero corporis. Et illum qui numquam voluptas. Est id sed ea facilis laudantium aut a nulla. Fuga officiis dolores enim minima et.\",\n            \"url\": \"https://www.runte.info/quam-laboriosam-placeat-officia\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/0099ee?text=debitis\",\n            \"published_at\": \"1970-04-07\",\n            \"category\": \"sed\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"d2a9c444-a259-4a74-8fdf-af9721fd0469\",\n            \"source\": \"Guardian\",\n            \"author\": \"Ms. Rosie Shanahan DVM\",\n            \"title\": \"Aut quas omnis nam vitae.\",\n            \"description\": \"Aut sit ut sunt sapiente facilis. Maxime est magnam libero rerum voluptas recusandae dolor. Ea et ipsum architecto quia eos. Illo et voluptas sapiente qui sint.\",\n            \"content\": \"Est explicabo voluptatem qui fugit quia autem. Eos sunt omnis ut magni minima voluptas sequi soluta. In vel quidem ea ab cum alias occaecati.\",\n            \"url\": \"http://dooley.net/natus-pariatur-corporis-ut-qui-et\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00bbaa?text=voluptatem\",\n            \"published_at\": \"1973-01-28\",\n            \"category\": \"rem\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"85d9175a-939a-4038-a5ce-9c554ca98836\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Dr. Taurean Lebsack DVM\",\n            \"title\": \"Illo sed quisquam officiis.\",\n            \"description\": \"Corrupti asperiores voluptas a. Inventore reiciendis consequuntur occaecati aut.\",\n            \"content\": \"Ut debitis impedit sed tenetur totam eius nesciunt. Aut itaque dolores harum nobis. Corrupti quisquam labore itaque rerum ipsa sequi. Labore perferendis in et sapiente labore ad.\",\n            \"url\": \"http://rau.com/\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/0011aa?text=magni\",\n            \"published_at\": \"1973-09-21\",\n            \"category\": \"qui\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"da2828c4-58fb-4405-a0c5-6d1b99302fe3\",\n            \"source\": \"Guardian\",\n            \"author\": \"Sven Rempel\",\n            \"title\": \"Eum et est repudiandae nemo.\",\n            \"description\": \"Voluptates eveniet itaque omnis aliquam. Delectus earum error et beatae facere sapiente.\",\n            \"content\": \"Totam id provident non atque in voluptas. Nihil nostrum dolorum molestias vitae. Perspiciatis sint eos perferendis voluptatem id ipsam nihil rerum. Voluptatum adipisci in reiciendis in. Sit dignissimos rerum velit quos dolorem modi.\",\n            \"url\": \"http://www.haley.com/aliquam-quia-et-voluptatum-dolores-consequatur-deleniti-magni.html\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00bbff?text=dolore\",\n            \"published_at\": \"1992-10-04\",\n            \"category\": \"adipisci\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"c60c5f04-d329-45cd-8409-10ea34220a52\",\n            \"source\": \"Guardian\",\n            \"author\": \"Nellie Kreiger\",\n            \"title\": \"Qui quia est ex ea quos doloremque est reprehenderit.\",\n            \"description\": \"Vel enim molestiae error quis. Consequatur ex omnis dolorem pariatur et quia molestiae. Impedit commodi esse eius et ut eius. Consequuntur illo est tempora itaque eos minus.\",\n            \"content\": \"Et accusantium et numquam ut perspiciatis debitis. Est id suscipit autem incidunt nam molestiae. Laborum aut cumque illo ipsam. Ut ea excepturi voluptatibus voluptatum commodi accusantium.\",\n            \"url\": \"http://www.pacocha.com/aliquam-est-aut-et-quis-vitae\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00bbbb?text=eveniet\",\n            \"published_at\": \"1994-02-15\",\n            \"category\": \"consequatur\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"e8dcb556-60ac-41b9-b942-51fffcbc7725\",\n            \"source\": \"NYT\",\n            \"author\": \"Leda Christiansen\",\n            \"title\": \"Dolorem aut et ex nostrum fugit in quod.\",\n            \"description\": \"Vero non ut delectus autem assumenda eaque. Sunt cumque rerum aperiam fugiat. Dolorem illum voluptatum explicabo sapiente.\",\n            \"content\": \"Adipisci quos ut eligendi quo. Distinctio harum voluptatem maxime iste aut. Ipsam necessitatibus hic sit perspiciatis accusantium. Incidunt dolor asperiores explicabo itaque quae ut dolores.\",\n            \"url\": \"http://www.funk.info/nihil-velit-et-voluptas-ut-repellat-neque-facilis\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00dd88?text=a\",\n            \"published_at\": \"1982-03-08\",\n            \"category\": \"consequatur\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"2d27fdc9-0d7f-4dd3-a07f-18a4bb082b28\",\n            \"source\": \"NYT\",\n            \"author\": \"Lorena Paucek\",\n            \"title\": \"Aut molestias occaecati voluptatem molestiae amet ex dolor.\",\n            \"description\": \"Ea qui explicabo non aspernatur voluptas quam dolor aut. Magnam hic eum esse dolore quo voluptatem qui. Sapiente cumque nihil accusantium.\",\n            \"content\": \"In eaque repellat dolorum sapiente a architecto voluptas voluptates. Ab aspernatur harum omnis vero. Dolore porro et ab culpa voluptas voluptatem fuga.\",\n            \"url\": \"http://ondricka.com/sunt-vel-eaque-ab-perspiciatis-id.html\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00dd22?text=quod\",\n            \"published_at\": \"1998-03-17\",\n            \"category\": \"laudantium\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"3db496e4-d826-4964-9147-c6347b4c2bc2\",\n            \"source\": \"Guardian\",\n            \"author\": \"Prof. Aylin Keeling Jr.\",\n            \"title\": \"Est voluptatem labore architecto qui.\",\n            \"description\": \"Enim qui laborum et quos eveniet. Architecto unde sit alias qui quibusdam quo. Rem sit et suscipit enim sequi ratione. Et amet quia nostrum soluta.\",\n            \"content\": \"Facere rem et est et. Possimus omnis quaerat ut voluptas a expedita nisi. Pariatur in veritatis vero est nihil libero quia. Voluptas quia repellat quia est.\",\n            \"url\": \"http://jerde.com/suscipit-enim-ut-ratione-est\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00aa55?text=minus\",\n            \"published_at\": \"2016-01-03\",\n            \"category\": \"rerum\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Search by category, source",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/articles/search?keyword=tech&date=2024-12-16&category=science&source=BBC",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "tech"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-16"
+								},
+								{
+									"key": "category",
+									"value": "science"
+								},
+								{
+									"key": "source",
+									"value": "BBC"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search articles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/articles/search?source=newsapi",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"articles",
+										"search"
+									],
+									"query": [
+										{
+											"key": "source",
+											"value": "newsapi"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 15:24:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"uuid\": \"e095feb3-319e-448c-987b-40747012315c\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Prof. Bruce Emmerich\",\n            \"title\": \"Sit suscipit eveniet aut aut.\",\n            \"description\": \"Aliquid rerum quos optio aliquam ut. Fugit qui nam asperiores veniam ipsum earum quisquam. Et magnam et vero officia.\",\n            \"content\": \"Ut eum est sed laudantium quis qui. Expedita officiis voluptas assumenda vitae autem enim. Ut quia nam voluptate est delectus qui ducimus maxime.\",\n            \"url\": \"http://www.stanton.biz/enim-consequatur-ratione-blanditiis-accusamus-consequatur-qui-eveniet-sapiente\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00aa55?text=iste\",\n            \"published_at\": \"1970-07-14\",\n            \"category\": \"sapiente\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"49a431a3-ab47-4e13-a95e-a5b3221275a4\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Marlen Larkin\",\n            \"title\": \"Beatae atque debitis inventore aperiam neque fugiat.\",\n            \"description\": \"Magni qui illo quae recusandae quasi placeat. Est qui in dolorem et aspernatur voluptate. Magnam perspiciatis consequuntur eius voluptatem dolore blanditiis non.\",\n            \"content\": \"Alias temporibus molestias qui corrupti et maxime. Omnis et et tempora sed. Qui velit libero ratione maiores odit.\",\n            \"url\": \"http://www.luettgen.info/\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/004499?text=molestiae\",\n            \"published_at\": \"1985-06-24\",\n            \"category\": \"nesciunt\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"de5ff658-a9c1-4ad2-bbdd-0d3751a87974\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Eveline Welch\",\n            \"title\": \"Ipsa ut et vel consectetur laudantium non.\",\n            \"description\": \"Blanditiis sapiente veniam adipisci natus. Repellat enim cum iusto et eligendi. Atque voluptatum quam soluta recusandae amet adipisci. Aut debitis laboriosam suscipit.\",\n            \"content\": \"Quidem officia praesentium sit assumenda mollitia nemo. Atque aut occaecati consequatur deleniti non ratione quibusdam. Possimus qui quod doloribus esse modi sint vitae. Commodi at qui aut incidunt ipsa asperiores quod.\",\n            \"url\": \"https://greenholt.com/distinctio-et-voluptates-debitis-ea-aut-ad-tempore.html\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/0088ee?text=in\",\n            \"published_at\": \"1987-09-17\",\n            \"category\": \"molestiae\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"158d4672-081c-413b-991a-7a6b200e44d3\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Mollie Mueller\",\n            \"title\": \"Ipsum accusantium ut libero voluptates sequi odit non.\",\n            \"description\": \"Provident ullam nihil beatae omnis suscipit. Libero earum sapiente non saepe est sed excepturi eos. Doloribus dolorum maiores sit quia quia.\",\n            \"content\": \"Qui architecto voluptatem repellat odit qui excepturi. Possimus et voluptas autem. Sit totam rerum nam placeat reiciendis tempora itaque. Quia aut dolorem repellendus dolor aut et.\",\n            \"url\": \"http://treutel.com/nihil-recusandae-praesentium-quam-exercitationem\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00bb33?text=autem\",\n            \"published_at\": \"2024-10-10\",\n            \"category\": \"est\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"85d9175a-939a-4038-a5ce-9c554ca98836\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Dr. Taurean Lebsack DVM\",\n            \"title\": \"Illo sed quisquam officiis.\",\n            \"description\": \"Corrupti asperiores voluptas a. Inventore reiciendis consequuntur occaecati aut.\",\n            \"content\": \"Ut debitis impedit sed tenetur totam eius nesciunt. Aut itaque dolores harum nobis. Corrupti quisquam labore itaque rerum ipsa sequi. Labore perferendis in et sapiente labore ad.\",\n            \"url\": \"http://rau.com/\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/0011aa?text=magni\",\n            \"published_at\": \"1973-09-21\",\n            \"category\": \"qui\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"14b5cdcc-e497-4f11-964b-fc8758efb170\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Dr. Geovany Goodwin\",\n            \"title\": \"Dolores voluptatibus quos accusamus.\",\n            \"description\": \"Omnis eum et consectetur quaerat molestiae sit quam. Suscipit ab culpa eligendi. Non adipisci odit beatae beatae officia maiores. Totam saepe laborum aut reprehenderit.\",\n            \"content\": \"Quibusdam dolore magni non odit voluptate assumenda. Id sunt aliquid pariatur odio libero sit. Quis incidunt sapiente voluptatum vitae voluptate aliquid aut. Necessitatibus dignissimos reiciendis incidunt est.\",\n            \"url\": \"https://www.jakubowski.com/ratione-sed-et-laudantium-ut-nihil\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/007711?text=aliquam\",\n            \"published_at\": \"2003-12-06\",\n            \"category\": \"nam\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        },\n        {\n            \"uuid\": \"361c3a3a-e863-4e9b-9733-7f8a2e69a5ab\",\n            \"source\": \"NewsAPI\",\n            \"author\": \"Layne Schmeler PhD\",\n            \"title\": \"Quis nostrum perferendis cum non.\",\n            \"description\": \"Adipisci officia est fugiat corrupti. Aut sint inventore et porro tenetur et. Error reiciendis nostrum esse voluptatum delectus harum. Rerum ut cumque delectus.\",\n            \"content\": \"Animi beatae quae quis et. Praesentium vitae sed et et. Veniam voluptate aut quia quasi qui doloremque officia. Totam beatae sit ipsam inventore dolorem.\",\n            \"url\": \"http://www.bradtke.org/deleniti-deserunt-quidem-non-ipsam-voluptatem-odit-qui.html\",\n            \"url_to_image\": \"https://via.placeholder.com/640x480.png/00ee33?text=totam\",\n            \"published_at\": \"1997-04-21\",\n            \"category\": \"et\",\n            \"created_at\": \"2024-12-16 15:17:26\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Search by UUID",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/article/e095feb3-319e-448c-987b-40747012315c",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"article",
+								"e095feb3-319e-448c-987b-40747012315c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Article by UUID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/article/e095feb3-319e-448c-987b-40747012315c",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"article",
+										"e095feb3-319e-448c-987b-40747012315c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 15:25:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"uuid\": \"e095feb3-319e-448c-987b-40747012315c\",\n        \"source\": \"NewsAPI\",\n        \"author\": \"Prof. Bruce Emmerich\",\n        \"title\": \"Sit suscipit eveniet aut aut.\",\n        \"description\": \"Aliquid rerum quos optio aliquam ut. Fugit qui nam asperiores veniam ipsum earum quisquam. Et magnam et vero officia.\",\n        \"content\": \"Ut eum est sed laudantium quis qui. Expedita officiis voluptas assumenda vitae autem enim. Ut quia nam voluptate est delectus qui ducimus maxime.\",\n        \"url\": \"http://www.stanton.biz/enim-consequatur-ratione-blanditiis-accusamus-consequatur-qui-eveniet-sapiente\",\n        \"url_to_image\": \"https://via.placeholder.com/640x480.png/00aa55?text=iste\",\n        \"published_at\": \"1970-07-14\",\n        \"category\": \"sapiente\",\n        \"created_at\": \"2024-12-16 15:17:26\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Preferences",
+			"item": [
+				{
+					"name": "Fetch",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|PcRfGEuQSTN7gvD2cPQpENpQ3lRjSyu8LfvshB1R5094b620",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/user/preferences",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"preferences"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/user/preferences",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"user",
+										"preferences"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 15:40:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"sources\": [\n            {\n                \"uuid\": \"99a31aeb-a595-496a-8310-b1aad118dc74\",\n                \"user_id\": 71,\n                \"source\": \"TechCrunch\",\n                \"created_at\": \"2024-12-16 15:35:29\"\n            },\n            {\n                \"uuid\": \"180a2485-544a-48d4-b75e-32179e9e695b\",\n                \"user_id\": 71,\n                \"source\": \"BBC\",\n                \"created_at\": \"2024-12-16 15:35:29\"\n            }\n        ],\n        \"categories\": [\n            {\n                \"uuid\": \"5c39d8e8-9812-4d0b-b38a-7f7f4310dda1\",\n                \"user_id\": 71,\n                \"category\": \"Technology\",\n                \"created_at\": \"2024-12-16 15:35:29\"\n            },\n            {\n                \"uuid\": \"c54a3e65-90c0-49ab-91d2-59d649bfe952\",\n                \"user_id\": 71,\n                \"category\": \"Science\",\n                \"created_at\": \"2024-12-16 15:35:29\"\n            }\n        ],\n        \"authors\": [\n            {\n                \"uuid\": \"00de5ba4-3456-470d-8d1c-30b49e9bf52e\",\n                \"user_id\": 71,\n                \"author\": \"John Doe\",\n                \"created_at\": \"2024-12-16 15:35:29\"\n            },\n            {\n                \"uuid\": \"f2823e88-942c-40a9-b87d-901748a59e25\",\n                \"user_id\": 71,\n                \"author\": \"Jane Smith\",\n                \"created_at\": \"2024-12-16 15:35:29\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "personalized feed",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|PcRfGEuQSTN7gvD2cPQpENpQ3lRjSyu8LfvshB1R5094b620",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/user/personalized-feed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"personalized-feed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|PcRfGEuQSTN7gvD2cPQpENpQ3lRjSyu8LfvshB1R5094b620",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sources\": [\"TechCrunch\", \"BBC\"],\r\n    \"categories\": [\"Technology\", \"Science\"],\r\n    \"authors\": [\"John Doe\", \"Jane Smith\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/user/preferences",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"preferences"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "set",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sources\": [\"TechCrunch\", \"BBC\"],\r\n    \"categories\": [\"Technology\", \"Science\"],\r\n    \"authors\": [\"John Doe\", \"Jane Smith\"]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/user/preferences",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"user",
+										"preferences"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Dec 2024 15:33:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User preferences set successfully.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
